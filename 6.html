@@ -1,0 +1,143 @@
+<html>
+<head>
+<title>Cultura digital 2</title>
+</head>
+
+<body background="IP1/FND.jpg" bgcolor="#f0f0f0" text="black">
+  <center>
+    <h1><font color="#2E86C1" face="Arial"><strong>Bienvenido al Rincón del UNO</strong></font></h1>
+  </center>
+
+  <center><img src="IP1/LOGO.png" alt="Logo Arduino"></center>
+  <center>
+<a href="index.html">
+<img src="IP1/INICIO.jpg" border="0 "alt="boton de inicio">
+</a>
+<a href="3.html">
+<img src="IP1/p1.jpg" border="0 "alt="boton de p1">
+</a>
+<a href="4.html">
+<img src="IP1/p2.jpg" border="0 "alt="boton de p2">
+</a>
+<a href="5.html">
+<img src="IP1/p3.jpg" border="0 "alt="boton de p3">
+</a>
+<a href="6.html">
+<img src="IP1/p4.jpg" border="0 "alt="boton de p4">
+</a>
+<a href="2.html">
+<img src="IP1/ACERCA DE.jpg" border="0 "alt="boton de acerca de">
+</a>
+</center>
+
+<center>
+    <table border="1" width="90%" bgcolor="#D6EAF8">
+      <tr>
+        <td colspan="2"><center><h2><font color="black" face="Verdana">Proyecto para mecatronicos: circuito para control de 2 motores con push buttons</font></h2></center></td>
+      </tr>
+      <tr>
+        <td><font color="black" face="Verdana">
+          <h3><strong>Descripción:</strong></h3>
+          Aprende a pensar usando una placa Arduino, microcontroladores y código en lenguaje C++.
+<center><img src= "IP1/CART.jpg"></center>
+<p> primero que nada, necesitaras:</p>
+<p> 1 Arduino UNO(o cualquiera que tengas)</p>
+<p> 22 cables o jumpers</p>
+<p> 2 motorreductores</p>
+<p> 1 Circuito Integrado L293D o un puente H</p> 
+<p> 4 push buttons</p>
+<p> 4 resistencias de 1k ohmnio</p>
+<p> 1 bateria de 9v(de las cuadradas)</p>
+<p>conecta todo como esta en la imagen</p>
+<p>luego carga este codigo en Arduino IDE</p>
+<p>
+<p>// BOTONES</p>
+<p>int Badelante = 8;</p>
+<p>int Batras = 9;</p>
+<p>int Bizquierda = 10;</p>
+<p>int Bderecha = 11;</p>
+
+<p>// MOTORES</p>
+<p>int motor1 = 4;   // Motor 1 adelante</p>
+<p>int motor11 = 5;  // Motor 1 atrás</p>
+<p>int motor2 = 6;   // Motor 2 adelante</p>
+<p>int motor22 = 7;  // Motor 2 atrás</p>
+
+<p>void setup() {</p>
+<p>  pinMode(Badelante, INPUT_PULLUP);</p>
+<p>  pinMode(Batras, INPUT_PULLUP);</p>
+<p>  pinMode(Bizquierda, INPUT_PULLUP);</p>
+<p>  pinMode(Bderecha, INPUT_PULLUP);</p>
+
+<p>  pinMode(motor1, OUTPUT);</p>
+<p>  pinMode(motor11, OUTPUT);</p>
+<p>  pinMode(motor2, OUTPUT);</p>
+<p>  pinMode(motor22, OUTPUT);</p>
+<p>}</p>
+
+<p>void loop() {</p>
+<p>  bool adelante = digitalRead(Badelante) == LOW;</p>
+<p>  bool atras = digitalRead(Batras) == LOW;</p>
+<p>  bool izquierda = digitalRead(Bizquierda) == LOW;</p>
+<p>  bool derecha = digitalRead(Bderecha) == LOW;</p>
+
+<p>  // Control motor 1</p>
+<p>  if (adelante) {</p>
+<p>    digitalWrite(motor1, HIGH);</p>
+<p>    digitalWrite(motor11, LOW);</p>
+<p>  } else if (atras) {</p>
+<p>    digitalWrite(motor1, LOW);</p>
+<p>    digitalWrite(motor11, HIGH);</p>
+<p>  } else {</p>
+<p>    digitalWrite(motor1, LOW);</p>
+<p>    digitalWrite(motor11, LOW);</p>
+<p>  }</p>
+
+<p>  // Control motor 2</p>
+<p>  if (izquierda) {</p>
+<p>    digitalWrite(motor2, HIGH);</p>
+<p>    digitalWrite(motor22, LOW);</p>
+<p>  } else if (derecha) {</p>
+<p>    digitalWrite(motor2, LOW);</p>
+<p>    digitalWrite(motor22, HIGH);</p>
+<p>  } else {</p>
+<p>    digitalWrite(motor2, LOW);</p>
+<p>    digitalWrite(motor22, LOW);</p>
+<p>  }</p>
+<p>}</p>
+</p>
+<p>
+y listo, acabas de hacer tu primer proyecto de mecatronica basica......viva!
+</p>
+        </font></td>
+      </tr>
+    </table>
+  </center>
+
+
+<center>
+  <p>
+    <a href="index.html" style="text-decoration: none; font-family: Arial; font-size: 18px; color: #2E86C1;">
+      Inicio
+    </a> |
+   <a href="3.html" style="text-decoration: none; font-family: Arial; font-size: 18px; color: #2E86C1;">
+      proyecto 1
+    </a> |
+    <a href="4.html" style="text-decoration: none; font-family: Arial; font-size: 18px; color: #2E86C1;">
+      proyecto 2|
+    </a>
+<a href="5.html" style="text-decoration: none; font-family: Arial; font-size: 18px; color: #2E86C1;">
+      proyecto 3
+    </a> |
+    <a href="6.html" style="text-decoration: none; font-family: Arial; font-size: 18px; color: #2E86C1;">
+      proyecto 4|
+    </a>
+ <a href="2.html" style="text-decoration: none; font-family: Arial; font-size: 18px; color: #2E86C1;">
+      Acerca de
+    </a>
+
+  </p>
+</center>
+
+</body>
+</html>
